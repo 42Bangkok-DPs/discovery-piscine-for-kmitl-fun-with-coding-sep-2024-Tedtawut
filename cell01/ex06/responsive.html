@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        table {
+            width: 100%;
+            height: 100vh;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            box-sizing: border-box;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+        .box1 { background-color: rgb(255, 78, 211);}
+        .box2 { background-color: #00fc22;}
+        @media (max-width: 600px) {
+            th, td {
+                font-size: 0.8em; 
+                padding: 10px; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class = "box1">PINK</td>
+            <td class = "box2">GREEN</td>
+        </tr>
+    </table>
+</body>
+</html>
