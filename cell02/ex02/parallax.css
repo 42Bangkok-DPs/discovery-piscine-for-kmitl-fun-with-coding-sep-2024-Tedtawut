@@ -1,0 +1,30 @@
+.parallax1 {
+    background-image: url("https://th.bing.com/th/id/OIP.97i2H0mQIolcxilKTQ8wDgHaD4?rs=1&pid=ImgDetMain");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+.parallax2 {
+    background-image: url("https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xNDg1MTgyOC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY1MTgwNzQ2N30.AUuWmV16htjORYCh7atz5qEIchmdf_lm3Mpl16c4I9k/img.jpg?width=980");
+    min-height: 1000px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative; 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 15px; 
+    text-align: center;
+    width: 100%; 
+}
