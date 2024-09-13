@@ -1,0 +1,48 @@
+
+body{
+    background-image: url("./back1.png");
+}
+
+p{
+   font-size: 35px;
+}
+
+.text1{
+    font-size: 55px;
+    font-family: cursive;
+
+}
+
+.text3{
+    border: 3px solid #00f2ff; width: fit-content;
+    background-color: #ffffff;
+    
+}
+
+.text2{
+    font-size: 30px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  
+  li {
+    float: left;
+  }
+  
+  ul>li>a {
+    display: block;
+    padding: 8px;
+
+  }
+
+  .div1 {
+    width: 130%; height: 30px;
+    top: 0;
+    background-color: #ffee00;
+    position: absolute;
+    left: 0;
+  }
