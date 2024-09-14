@@ -1,16 +1,16 @@
 body {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: fantasy;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    transition: background-color 0.1s ease;
+    transition: background-color 0.2s ease;
 }
 
 button {
-    padding: 15px 30px;
-    font-size: 18px;
+    padding: 30px 60px;
+    font-size: 30px;
     background-color: #ff4f69;
     color: rgb(0, 0, 0);
     border: none;

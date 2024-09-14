@@ -23,23 +23,23 @@
         .calculator input, .calculator select {
             margin: 0 10px;
             padding: 10px;
-            font-size: 16px;
+            font-size: 20px;
         }
     </style>
 </head>
 <body>
-    <h1 style="text-align: center;">Calculator</h1>
+    <h1 style="text-align: center;">เครื่องคิดเลข</h1>
     <div class="calculator">
         <input type="text" id="leftnumber" name="leftnumber">
         <select name="Math" id="Math">
-            <option value="plus">+</option>
-            <option value="minus">-</option>
-            <option value="multiply">*</option>
-            <option value="divide">/</option>
-            <option value="percent">%</option>
+            <option value="plus">บวก</option>
+            <option value="minus">ลบ</option>
+            <option value="multiply">คูณ</option>
+            <option value="divide">หาร</option>
+            <option value="percent">เปอร์เซนต์</option>
         </select>
         <input type="text" id="rightnumber" name="rightnumber">
-        <input type="button" id="calculateButton" value="Try me!">
+        <input type="button" id="calculateButton" value="คำนวณ!">
     </div>
     
     <script>
@@ -81,16 +81,16 @@
                     break;
                 case 'divide':
                     if (rightNumber === 0) {
-                        alert("It's over 9000!");
-                        console.log("It's over 9000!");
+                        alert("over 9000!");
+                        console.log("over 9000!");
                         return;
                     }
                     result = leftNumber / rightNumber;
                     break;
                 case 'percent':
                     if (rightNumber === 0) {
-                        alert("It's over 9000!");
-                        console.log("It's over 9000!");
+                        alert("over 9000!");
+                        console.log("over 9000!");
                         return;
                     }
                     result = leftNumber % rightNumber;
@@ -101,7 +101,7 @@
             console.log(`Result: ${result}`);
         });
 
-        // Alert every 30 seconds
+ 
         setInterval(() => {
             alert('Please, use me...');
         }, 30000);
