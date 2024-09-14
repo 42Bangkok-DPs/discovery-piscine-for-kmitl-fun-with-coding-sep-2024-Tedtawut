@@ -1,0 +1,23 @@
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.1s ease;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #ff4f69;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #06f3ff;
+}

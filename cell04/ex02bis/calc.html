@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .calculator {
+            display: flex;
+            align-items: center;
+        }
+
+        .calculator input, .calculator select {
+            margin: 0 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Calculator</h1>
+    <div class="calculator">
+        <input type="text" id="leftnumber" name="leftnumber">
+        <select name="Math" id="Math">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="multiply">*</option>
+            <option value="divide">/</option>
+            <option value="percent">%</option>
+        </select>
+        <input type="text" id="rightnumber" name="rightnumber">
+        <input type="button" id="calculateButton" value="Try me!">
+    </div>
+    
+    <script>
+    $(document).ready(function() {
+        $('#calculateButton').click(function() {
+            const leftNumberStr = $('#leftnumber').val().trim();
+            const rightNumberStr = $('#rightnumber').val().trim();
+            const operator = $('#Math').val();
+
+            function isValidNumber(value) {
+                return /^-?\d+$/.test(value);
+            }
+
+            if (!isValidNumber(leftNumberStr) || !isValidNumber(rightNumberStr)) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+
+            const leftNumber = parseFloat(leftNumberStr);
+            const rightNumber = parseFloat(rightNumberStr);
+
+            if (!Number.isInteger(leftNumber) || !Number.isInteger(rightNumber) || leftNumber < 0 || rightNumber < 0) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+            
+            let result;
+            switch (operator) {
+                case 'plus':
+                    result = leftNumber + rightNumber;
+                    break;
+                case 'minus':
+                    result = leftNumber - rightNumber;
+                    break;
+                case 'multiply':
+                    result = leftNumber * rightNumber;
+                    break;
+                case 'divide':
+                    if (rightNumber === 0) {
+                        alert("It's over 9000!");
+                        console.log("It's over 9000!");
+                        return;
+                    }
+                    result = leftNumber / rightNumber;
+                    break;
+                case 'percent':
+                    if (rightNumber === 0) {
+                        alert("It's over 9000!");
+                        console.log("It's over 9000!");
+                        return;
+                    }
+                    result = leftNumber % rightNumber;
+                    break;
+            }
+
+            alert(`Result: ${result}`);
+            console.log(`Result: ${result}`);
+        });
+
+        // Alert every 30 seconds
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    });
+    </script>
+</body>
+</html>
